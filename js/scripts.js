@@ -1,30 +1,30 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZWppYW5nMTEwIiwiYSI6ImNrNnR2bnZmNTAzZ3Azb3Izd3ExOW9obmUifQ.1gPI_5WBiSt3GwqrGk_S8g';
 
 
-var initialCenterPoint = [-73.991780, 40.746]
-var initialZoom = 11.5
+var initialCenterPoint = [-88.0939588, 42.3021691]
+var initialZoom = 9
 
-var YearBuiltLookup = (code) => {
+var ZIPLookup = (code) => {
   switch (code) {
     case 1:
       return {
         color: '#f4f455',
-        description: '2000',
+        description: '60002',
       };
     case 2:
       return {
         color: '#f7d496',
-        description: '2001',
+        description: '60030',
       };
     case 3:
       return {
         color: '#FF9900',
-        description: '2002',
+        description: '60031',
       };
     case 4:
       return {
         color: '#f7cabf',
-        description: '2003',
+        description: '60045',
       };
     case 5:
       return {
@@ -79,7 +79,7 @@ $('#feature-info').html(defaultText)
 
 var initOptions = {
   container: 'map-container',
-  style: 'mapbox://styles/mapbox/dark-v10',
+  style: 'mapbox://styles/mapbox/light-v10',
   center: initialCenterPoint,
   zoom: initialZoom,
 }
@@ -107,51 +107,51 @@ map.addLayer({
     paint: {
       'fill-color': {
         type: 'categorical',
-        property: 'YearBuilt',
+        property: 'ZIP',
         stops: [
           [
             '01',
-            YearBuiltLookup(1).color,
+            ZIPLookup(1).color,
           ],
           [
             '02',
-            YearBuiltLookup(2).color,
+            ZIPLookup(2).color,
           ],
           [
             '03',
-            YearBuiltLookup(3).color,
+            ZIPLookup(3).color,
           ],
           [
             '04',
-            YearBuiltLookup(4).color,
+            ZIPLookup(4).color,
           ],
           [
             '05',
-            YearBuiltLookup(5).color,
+            ZIPLookup(5).color,
           ],
           [
             '06',
-            YearBuiltLookup(6).color,
+            ZIPLookup(6).color,
           ],
           [
             '07',
-            YearBuiltLookup(7).color,
+            ZIPLookup(7).color,
           ],
           [
             '08',
-            YearBuiltLookup(8).color,
+            ZIPLookup(8).color,
           ],
           [
             '09',
-            YearBuiltLookup(9).color,
+            ZIPLookup(9).color,
           ],
           [
             '10',
-            YearBuiltLookup(10).color,
+            ZIPLookup(10).color,
           ],
           [
             '11',
-            YearBuiltLookup(11).color,
+            ZIPLookup(11).color,
           ],
 
         ]
@@ -174,9 +174,43 @@ map.addLayer({
       paint: {
         'line-width': 2,
         'line-opacity': 0.9,
-        'line-color': 'white',
+        'line-color': 'red',
       }
     });
 
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ['CLASS 4'],
+    });
 
-})
+    // if the mouse pointer is over a feature on our layer of interest
+        // take the data for that feature and display it in the sidebar
+        if (features.length > 0) {
+          map.getCanvas().style.cursor = 'pointer';  // make the cursor a pointer
+
+          var hoveredFeature = features[0]
+          var featureInfo = `
+            <h4>${hoveredFeature.properties.ZIP}</h4>
+            <p><strong>All Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.All_Cancer)).description}</p>
+            <p><strong>Breast Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Breast_Can)).description}</p>
+          `
+          $('#feature-info').html(featureInfo)
+
+          // set this lot's polygon feature as the data for the highlight source
+          map.getSource('highlight-feature').setData(hoveredFeature.geometry);
+        } else {
+          // if there is no feature under the mouse, reset things:
+          map.getCanvas().style.cursor = 'default'; // make the cursor default
+
+          // reset the highlight source to an empty featurecollection
+          map.getSource('highlight-feature').setData({
+            type: 'FeatureCollection',
+            features: []
+          });
+
+          // reset the default message
+          $('#feature-info').html(defaultText)
+        }
+      })
+
+    })
