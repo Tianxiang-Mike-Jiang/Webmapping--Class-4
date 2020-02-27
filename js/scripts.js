@@ -73,6 +73,10 @@ var YearBuiltLookup = (code) => {
       };
   }
 };
+
+var defaultText = '<p>Move the mouse over the map to Year Built of the property</p>'
+$('#feature-info').html(defaultText)
+
 var initOptions = {
   container: 'map-container',
   style: 'mapbox://styles/mapbox/light-v10',
@@ -86,6 +90,8 @@ var map = new mapboxgl.Map(initOptions);
 
 map.addControl(new mapboxgl.NavigationControl());
 
+map.on('style.load', function() {
+  
 map.addSource('CLASS 4', {
   type: 'geojson',
   data: './data/CLASS 4.geojson',
