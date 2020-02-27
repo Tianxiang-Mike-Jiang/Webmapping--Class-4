@@ -261,12 +261,12 @@ map.on('mousemove', function (e) {
 
           var hoveredFeature = features[0]
           var featureInfo = `
-            <h4>${hoveredFeature.properties.ZIP}</h4>
-            <p><strong>All Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.All_Cancer)).description}</p>
-            <p><strong>Breast Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Breast_Can)).description}</p>
-            <p><strong>Colorectal Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Colorectal)).description}</p>
-          `
-          $('#information').html(featureInfo)
+          <h4>${hoveredFeature.properties.ZIP}</h4>
+          <p><strong>All Cancer:</strong> ${parseInt(hoveredFeature.properties.All_Cancer)}</p>
+          <p><strong>Breast Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Breast_Can)).description}</p>
+          <p><strong>Colorectal Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Colorectal)).description}</p>
+        `
+        $('#information').html(featureInfo)
 
           // set this lot's polygon feature as the data for the highlight source
           map.getSource('highlight-feature').setData(hoveredFeature.geometry);
