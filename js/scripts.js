@@ -91,7 +91,7 @@ var map = new mapboxgl.Map(initOptions);
 map.addControl(new mapboxgl.NavigationControl());
 
 map.on('style.load', function() {
-  
+
 map.addSource('CLASS 4', {
   type: 'geojson',
   data: './data/CLASS 4.geojson',
@@ -101,12 +101,60 @@ map.addSource('CLASS 4', {
 console.log(map.getStyle().sources)
 
 map.addLayer({
-   id: 'highlight-line',
-   type: 'line',
-   source: 'highlight-feature',
-   paint: {
-     'line-width': 2,
-     'line-opacity': 0.9,
-     'line-color': 'black',
-       }
- });
+    id: 'fill-CLASS 4',
+    type: 'fill',
+    source: 'CLASS 4',
+    paint: {
+      'fill-color': {
+        type: 'categorical',
+        property: 'YearBuilt',
+        stops: [
+          [
+            '01',
+            YearBuiltLookup(1).color,
+          ],
+          [
+            '02',
+            YearBuiltLookup(2).color,
+          ],
+          [
+            '03',
+            YearBuiltLookup(3).color,
+          ],
+          [
+            '04',
+            YearBuiltLookup(4).color,
+          ],
+          [
+            '05',
+            YearBuiltLookup(5).color,
+          ],
+          [
+            '06',
+            YearBuiltLookup(6).color,
+          ],
+          [
+            '07',
+            YearBuiltLookup(7).color,
+          ],
+          [
+            '08',
+            YearBuiltLookup(8).color,
+          ],
+          [
+            '09',
+            YearBuiltLookup(9).color,
+          ],
+          [
+            '10',
+            YearBuiltLookup(10).color,
+          ],
+          [
+            '11',
+            YearBuiltLookup(11).color,
+          ],
+
+        ]
+      }
+    }
+  })
