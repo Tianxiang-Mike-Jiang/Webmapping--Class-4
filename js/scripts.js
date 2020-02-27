@@ -34,104 +34,109 @@ var ZIPLookup = (code) => {
     case 6:
       return {
         color: '#d36ff4',
-        description: '1816469100315',
+        description: '60035',
       };
     case 7:
       return {
         color: '#dac0e8',
-        description: '60035',
+        description: '60040',
       };
     case 8:
       return {
         color: '#5CA2D1',
-        description: '60040',
+        description: '60041',
       };
     case 9:
       return {
         color: '#8ece7c',
-        description: '60041',
+        description: '60042',
       };
     case 10:
       return {
         color: '#bab8b6',
-        description: '60042',
+        description: '60044',
       };
     case 11:
       return {
         color: '#5f5f60',
-        description: '60044',
+        description: '60045',
       };
     case 12:
       return {
         color: '#5f5f60',
-        description: '60045',
+        description: '60046',
       };
     case 13:
         return {
           color: '#5f5f60',
-          description: '60046',
+          description: '60047',
         };
     case 14:
           return {
             color: '#5f5f60',
-            description: '60047',
+            description: '60048',
           };
     case 15:
             return {
               color: '#5f5f60',
-              description: '60048',
+              description: '60060',
             };
     case 16:
                 return {
                   color: '#5f5f60',
-                  description: '60060',
+                  description: '60061',
                 };
     case 17:
                   return {
                     color: '#5f5f60',
-                    description: '60061',
+                    description: '60064',
                   };
     case 18:
                     return {
                       color: '#5f5f60',
-                      description: '60064',
+                      description: '60069',
                     };
 
     case 19:
                         return {
                           color: '#5f5f60',
-                          description: '60069',
+                          description: '60073',
                         };
     case 20:
                           return {
                             color: '#5f5f60',
-                            description: '60073',
+                            description: '60083',
                           };
     case 21:
                             return {
                               color: '#5f5f60',
-                              description: '60083',
+                              description: '60084',
                             };
     case 22:
                                 return {
                                   color: '#5f5f60',
-                                  description: '60084',
+                                  description: '60085',
                                 };
     case 23:
                                   return {
-                                    color: '#5f5f60',
-                                    description: '60085',
+                                    color: 'black',
+                                    description: '60087',
                                   };
     case 24:
                                     return {
                                       color: '#5f5f60',
-                                      description: '60087',
+                                      description: '60089',
                                     };
     case 25:
                 return {
                             color: '#5f5f60',
-                              description: '60089',
+                              description: '60096',
                                     };
+case 25:
+          return {
+          color: '#5f5f60',
+          description: '60099',
+                    };
       default:
       return {
         color: '#5f5f60',
