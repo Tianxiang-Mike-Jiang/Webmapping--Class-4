@@ -64,7 +64,7 @@ var YearBuiltLookup = (code) => {
     case 12:
       return {
         color: '#5f5f60',
-        description: '2009',
+        description: '1890',
       };
     default:
       return {
@@ -177,6 +177,6 @@ map.addLayer({
         'line-color': 'white',
       }
     });
-  
+
 
 })
