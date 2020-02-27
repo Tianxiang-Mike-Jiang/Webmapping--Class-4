@@ -224,7 +224,61 @@ map.addLayer({
             '11',
             ZIPLookup(11).color,
           ],
-
+          [
+            '12',
+            ZIPLookup(12).color,
+          ],
+          [
+            '13',
+            ZIPLookup(13).color,
+          ],
+          [
+            '14',
+            ZIPLookup(14).color,
+          ],
+          [
+            '15',
+            ZIPLookup(15).color,
+          ],
+          [
+            '16',
+            ZIPLookup(16).color,
+          ],
+          [
+            '17',
+            ZIPLookup(17).color,
+          ],
+          [
+            '18',
+            ZIPLookup(18).color,
+          ],
+          [
+            '19',
+            ZIPLookup(19).color,
+          ],
+          [
+            '20',
+            ZIPLookup(20).color,
+          ],
+          [
+            '21',
+            ZIPLookup(21).color,
+          ],
+          ['22',
+          ZIPLookup(22).color,
+        ],
+        [
+          '23',
+          ZIPLookup(23).color,
+        ],
+        [
+          '24',
+          ZIPLookup(24).color,
+        ],
+        [
+          '25',
+          ZIPLookup(25).color,
+        ]
         ]
       }
     }
