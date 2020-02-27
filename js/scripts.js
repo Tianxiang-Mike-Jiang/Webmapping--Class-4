@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZWppYW5nMTEwIiwiYSI6ImNrNnR2bnZmNTAzZ3Azb
 
 
 var initialCenterPoint = [-88.0939588, 42.3021691]
-var initialZoom = 9
+var initialZoom = 9.5
 
 var ZIPLookup = (code) => {
   switch (code) {
@@ -119,7 +119,7 @@ var ZIPLookup = (code) => {
                                 };
     case 23:
                                   return {
-                                    color: 'black',
+                                    color: '#FA8072',
                                     description: '60087',
                                   };
     case 24:
@@ -139,7 +139,7 @@ case 25:
                     };
       default:
       return {
-        color: '#5f5f60',
+        color: '#FA8072',
         description: 'N/A',
       };
   }
@@ -245,7 +245,7 @@ map.addLayer({
       paint: {
         'line-width': 2,
         'line-opacity': 0.9,
-        'line-color': 'red',
+        'line-color': '#FA8072',
       }
     });
 
@@ -263,8 +263,8 @@ map.on('mousemove', function (e) {
           var featureInfo = `
           <h4>${hoveredFeature.properties.ZIP}</h4>
           <p><strong>All Cancer:</strong> ${parseInt(hoveredFeature.properties.All_Cancer)}</p>
-          <p><strong>Breast Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Breast_Can)).description}</p>
-          <p><strong>Colorectal Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Colorectal)).description}</p>
+          <p><strong>Breast Cancer:</strong> ${parseInt(hoveredFeature.properties.Breast_Can)}</p>
+          <p><strong>Colorectal Cancer:</strong> ${parseInt(hoveredFeature.properties.Colorectal)}</p>
         `
         $('#information').html(featureInfo)
 
