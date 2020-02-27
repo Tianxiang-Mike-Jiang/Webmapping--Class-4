@@ -74,8 +74,8 @@ var ZIPLookup = (code) => {
   }
 };
 
-var defaultText = '<p>Move the mouse over the map to Year Built of the property</p>'
-$('#feature-info').html(defaultText)
+var defaultText = '<p>Get more information by move the mouse on the map</p>'
+$('#information').html(defaultText)
 
 var initOptions = {
   container: 'map-container',
@@ -193,8 +193,9 @@ map.on('mousemove', function (e) {
             <h4>${hoveredFeature.properties.ZIP}</h4>
             <p><strong>All Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.All_Cancer)).description}</p>
             <p><strong>Breast Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Breast_Can)).description}</p>
+            <p><strong>Colorectal Cancer:</strong> ${ZIPLookup(parseInt(hoveredFeature.properties.Colorectal)).description}</p>
           `
-          $('#feature-info').html(featureInfo)
+          $('#information').html(featureInfo)
 
           // set this lot's polygon feature as the data for the highlight source
           map.getSource('highlight-feature').setData(hoveredFeature.geometry);
@@ -209,7 +210,7 @@ map.on('mousemove', function (e) {
           });
 
           // reset the default message
-          $('#feature-info').html(defaultText)
+          $('#information').html(defaultText)
         }
       })
 
