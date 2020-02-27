@@ -8,113 +8,113 @@ var ZIPLookup = (code) => {
   switch (code) {
     case 1:
       return {
-        color: '#beb297',
+        color: '#FF3535',
         description: '60002',
       };
     case 2:
       return {
-        color: '#f7d496',
+        color: '#BA0000',
         description: '60010',
       };
     case 3:
       return {
-        color: '#FF9900',
+        color: '#FF3535',
         description: '60015',
       };
     case 4:
       return {
-        color: '#f7cabf',
+        color: '#BA0000',
         description: '60020',
       };
     case 5:
       return {
-        color: '#ea6661',
+        color: '#FF3535',
         description: '60030',
       };
     case 6:
       return {
-        color: '#d36ff4',
+        color: '#BA0000',
         description: '60035',
       };
     case 7:
       return {
-        color: '#dac0e8',
+        color: '#ea6661',
         description: '60040',
       };
     case 8:
       return {
-        color: '#5CA2D1',
+        color: '#BA0000',
         description: '60041',
       };
     case 9:
       return {
-        color: '#8ece7c',
+        color: '#FF3535',
         description: '60042',
       };
     case 10:
       return {
-        color: '#bab8b6',
+        color: '#BA0000',
         description: '60044',
       };
     case 11:
       return {
-        color: '#5f5f60',
+        color: '#BA0000',
         description: '60045',
       };
     case 12:
       return {
-        color: '#5f5f60',
+        color: '#FF3535',
         description: '60046',
       };
     case 13:
         return {
-          color: '#5f5f60',
+          color: '#FF3535',
           description: '60047',
         };
     case 14:
           return {
-            color: '#5f5f60',
+            color: '#FF3535',
             description: '60048',
           };
     case 15:
             return {
-              color: '#5f5f60',
+              color: '#FF3535',
               description: '60060',
             };
     case 16:
                 return {
-                  color: '#5f5f60',
+                  color: '#FF3535',
                   description: '60061',
                 };
     case 17:
                   return {
-                    color: '#5f5f60',
+                    color: '#FD7C7C',
                     description: '60064',
                   };
     case 18:
                     return {
-                      color: '#5f5f60',
+                      color: '#BA0000',
                       description: '60069',
                     };
 
     case 19:
                         return {
-                          color: '#5f5f60',
+                          color: '#FD7C7C',
                           description: '60073',
                         };
     case 20:
                           return {
-                            color: '#5f5f60',
+                            color: '#FF3535',
                             description: '60083',
                           };
     case 21:
                             return {
-                              color: '#5f5f60',
+                              color: '#FF3535',
                               description: '60084',
                             };
     case 22:
                                 return {
-                                  color: '#5f5f60',
+                                  color: '#FD7C7C',
                                   description: '60085',
                                 };
     case 23:
@@ -124,19 +124,24 @@ var ZIPLookup = (code) => {
                                   };
     case 24:
                                     return {
-                                      color: '#5f5f60',
+                                      color: '#FF3535',
                                       description: '60089',
                                     };
     case 25:
                 return {
-                            color: '#5f5f60',
+                            color: '#FF3535',
                               description: '60096',
                                     };
-case 25:
+case 26:
           return {
-          color: '#5f5f60',
+          color: '#FF3535',
           description: '60099',
                     };
+                    case 27:
+                              return {
+                              color: '#FF3535',
+                              description: '60031',
+                                        };
       default:
       return {
         color: '#2F4F4F',
@@ -181,103 +186,110 @@ map.addLayer({
         property: 'ZIP',
         stops: [
           [
-            '01',
+            '60002',
             ZIPLookup(1).color,
           ],
           [
-            '02',
+            '60010',
             ZIPLookup(2).color,
           ],
           [
-            '03',
+            '60015',
             ZIPLookup(3).color,
           ],
           [
-            '04',
+            '60020',
             ZIPLookup(4).color,
           ],
           [
-            '05',
+            '60030',
             ZIPLookup(5).color,
           ],
           [
-            '06',
+            '60035',
             ZIPLookup(6).color,
           ],
           [
-            '07',
+            '60040',
             ZIPLookup(7).color,
           ],
           [
-            '08',
+            '60041',
             ZIPLookup(8).color,
           ],
           [
-            '09',
+            '60042',
             ZIPLookup(9).color,
           ],
           [
-            '10',
+            '60044',
             ZIPLookup(10).color,
           ],
           [
-            '11',
+            '60045',
             ZIPLookup(11).color,
           ],
           [
-            '12',
+            '60046',
             ZIPLookup(12).color,
           ],
           [
-            '13',
+            '60047',
             ZIPLookup(13).color,
           ],
           [
-            '14',
+            '60048',
             ZIPLookup(14).color,
           ],
           [
-            '15',
+            '60060',
             ZIPLookup(15).color,
           ],
           [
-            '16',
+            '60061',
             ZIPLookup(16).color,
           ],
           [
-            '17',
+            '60064',
             ZIPLookup(17).color,
           ],
           [
-            '18',
+            '60069',
             ZIPLookup(18).color,
           ],
           [
-            '19',
+            '60073',
             ZIPLookup(19).color,
           ],
           [
-            '20',
+            '60083',
             ZIPLookup(20).color,
           ],
           [
-            '21',
+            '60084',
             ZIPLookup(21).color,
           ],
-          ['22',
+          ['60085',
           ZIPLookup(22).color,
         ],
         [
-          '23',
+          '60087',
           ZIPLookup(23).color,
         ],
         [
-          '24',
+          '60089',
           ZIPLookup(24).color,
         ],
         [
-          '25',
+          '60096',
           ZIPLookup(25).color,
+        ],
+        [
+          '60099',
+          ZIPLookup(26).color,
+        ],[
+          '60031',
+          ZIPLookup(27).color,
         ]
         ]
       }
@@ -299,7 +311,7 @@ map.addLayer({
       paint: {
         'line-width': 2,
         'line-opacity': 0.9,
-        'line-color': '#FA8072',
+        'line-color': '#000000',
       }
     });
 
