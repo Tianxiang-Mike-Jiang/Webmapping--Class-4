@@ -158,3 +158,22 @@ map.addLayer({
       }
     }
   })
+
+  map.addSource('highlight-feature', {
+    type: 'geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: []
+    }
+  })
+
+  map.addLayer({
+      id: 'highlight-line',
+      type: 'line',
+      source: 'highlight-feature',
+      paint: {
+        'line-width': 2,
+        'line-opacity': 0.9,
+        'line-color': 'white',
+      }
+    });
