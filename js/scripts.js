@@ -139,7 +139,7 @@ case 25:
                     };
       default:
       return {
-        color: '#FA8072',
+        color: '#2F4F4F',
         description: 'N/A',
       };
   }
