@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZWppYW5nMTEwIiwiYSI6ImNrNnR2bnZmNTAzZ3Azb
 var initialCenterPoint = [-73.991780, 40.746]
 var initialZoom = 11.5
 
-var YearBuilt = (code) => {
+var YearBuiltLookup = (code) => {
   switch (code) {
     case 1:
       return {
@@ -34,7 +34,7 @@ var YearBuilt = (code) => {
     case 6:
       return {
         color: '#d36ff4',
-        description: '2005',
+        description: '2011',
       };
     case 7:
       return {
