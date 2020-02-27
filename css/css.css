@@ -12,6 +12,9 @@ body {
   right: 0;
   left: 350px;
 }
+.mapboxgl-marker:hover {
+  cursor: pointer;
+}
 h3 {
   margin-top: 0;
   font-size: 1.5rem;

@@ -170,7 +170,7 @@ map.addLayer({
   map.addLayer({
       id: 'line-map',
       type: 'line',
-      source: 'CLASS 4',
+      source: 'highlight-feature',
       paint: {
         'line-width': 2,
         'line-opacity': 0.9,
@@ -180,7 +180,7 @@ map.addLayer({
 
 map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point, {
-        layers: ['CLASS 4'],
+        layers: ['fill-CLASS 4'],
     });
 
     // if the mouse pointer is over a feature on our layer of interest
