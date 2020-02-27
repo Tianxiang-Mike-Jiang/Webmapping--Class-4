@@ -1,11 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZWppYW5nMTEwIiwiYSI6ImNrNnR2bnZmNTAzZ3Azb3Izd3ExOW9obmUifQ.1gPI_5WBiSt3GwqrGk_S8g';
 
 
-var initialCenterPoint = [-98.3443301,41.9748827]
-var initialZoom = 3
-
-
-
+var initialCenterPoint = [-73.991780, 40.746]
+var initialZoom = 11.5
 
 var initOptions = {
   container: 'map-container',
@@ -20,46 +17,21 @@ var map = new mapboxgl.Map(initOptions);
 
 map.addControl(new mapboxgl.NavigationControl());
 
+map.addSource('CLASS 4', {
+  type: 'geojson',
+  data: './data/CLASS 4.geojson',
+});
 
-apartmentData.forEach(function(apartmentEntry) {
+// log the current map state to the console
+console.log(map.getStyle().sources)
 
-  new mapboxgl.Marker()
-    .setLngLat([apartmentEntry.longitude, apartmentEntry.latitude])
-    .setPopup(new mapboxgl.Popup({ offset: 25}) // add popups
-     .setHTML(`Want to learn more about <b>${apartmentEntry.apartmentName}</b>, Please visit <a href="http://www.${apartmentEntry.Website}">${apartmentEntry.Website}</a>`))
-    .addTo(map);
-})
-
-
-
-$('#newport').on('click', function() {
-  map.flyTo({
-    center: [-74.0478106,40.7238993],
-    zoom: initialZoom
-  })
-})
-
-$('#lic').on('click', function() {
-
-
-  map.flyTo({
-    center: [-73.9468553,40.748523],
-    zoom: initialZoom
-  })
-})
-
-$('#bk').on('click', function() {
-  var brooklynpoint = [-73.9854956,40.6869778]
-
-  map.flyTo({
-    center: brooklynpoint,
-    zoom: initialZoom
-  })
-})
-
-$('#nyc').on('click', function() {
-  map.flyTo({
-    center: initialCenterPoint,
-    zoom: initialZoom
-  })
-})
+map.addLayer({
+   id: 'highlight-line',
+   type: 'line',
+   source: 'highlight-feature',
+   paint: {
+     'line-width': 2,
+     'line-opacity': 0.9,
+     'line-color': 'black',
+       }
+ });
