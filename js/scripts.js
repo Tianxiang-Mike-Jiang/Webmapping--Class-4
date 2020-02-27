@@ -44,32 +44,32 @@ var YearBuiltLookup = (code) => {
     case 8:
       return {
         color: '#5CA2D1',
-        description: 'Public Facilities & Institutions',
+        description: '2005',
       };
     case 9:
       return {
         color: '#8ece7c',
-        description: 'Open Space & Outdoor Recreation',
+        description: '2006',
       };
     case 10:
       return {
         color: '#bab8b6',
-        description: 'Parking Facilities',
+        description: '2007',
       };
     case 11:
       return {
         color: '#5f5f60',
-        description: 'Vacant Land',
+        description: '2008',
       };
     case 12:
       return {
         color: '#5f5f60',
-        description: 'Other',
+        description: '2009',
       };
     default:
       return {
         color: '#5f5f60',
-        description: 'Other',
+        description: '2010',
       };
   }
 };
