@@ -168,9 +168,9 @@ map.addLayer({
   })
 
   map.addLayer({
-      id: 'highlight-line',
+      id: 'line-map',
       type: 'line',
-      source: 'highlight-feature',
+      source: 'CLASS 4',
       paint: {
         'line-width': 2,
         'line-opacity': 0.9,
