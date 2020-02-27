@@ -4,37 +4,37 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZWppYW5nMTEwIiwiYSI6ImNrNnR2bnZmNTAzZ3Azb
 var initialCenterPoint = [-73.991780, 40.746]
 var initialZoom = 11.5
 
-var LandUseLookup = (code) => {
+var YearBuilt = (code) => {
   switch (code) {
     case 1:
       return {
         color: '#f4f455',
-        description: '1 & 2 Family',
+        description: '2000',
       };
     case 2:
       return {
         color: '#f7d496',
-        description: 'Multifamily Walk-up',
+        description: '2001',
       };
     case 3:
       return {
         color: '#FF9900',
-        description: 'Multifamily Elevator',
+        description: '2002',
       };
     case 4:
       return {
         color: '#f7cabf',
-        description: 'Mixed Res. & Commercial',
+        description: '2003',
       };
     case 5:
       return {
         color: '#ea6661',
-        description: 'Commercial & Office',
+        description: '2004',
       };
     case 6:
       return {
         color: '#d36ff4',
-        description: 'Industrial & Manufacturing',
+        description: '2005',
       };
     case 7:
       return {
