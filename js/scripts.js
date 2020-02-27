@@ -69,7 +69,7 @@ var YearBuiltLookup = (code) => {
     default:
       return {
         color: '#5f5f60',
-        description: '2010',
+        description: 'Other',
       };
   }
 };
@@ -79,7 +79,7 @@ $('#feature-info').html(defaultText)
 
 var initOptions = {
   container: 'map-container',
-  style: 'mapbox://styles/mapbox/light-v10',
+  style: 'mapbox://styles/mapbox/dark-v10',
   center: initialCenterPoint,
   zoom: initialZoom,
 }
