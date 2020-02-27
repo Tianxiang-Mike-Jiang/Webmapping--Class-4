@@ -29,12 +29,12 @@ var ZIPLookup = (code) => {
     case 5:
       return {
         color: '#ea6661',
-        description: '2004',
+        description: '60047',
       };
     case 6:
       return {
         color: '#d36ff4',
-        description: '2011',
+        description: '60032',
       };
     case 7:
       return {
@@ -68,7 +68,7 @@ var ZIPLookup = (code) => {
       };
     default:
       return {
-        color: '#5f5f60',
+        color: '#A19C9C',
         description: 'Other',
       };
   }
