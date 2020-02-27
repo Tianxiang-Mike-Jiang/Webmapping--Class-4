@@ -39,7 +39,7 @@ var YearBuiltLookup = (code) => {
     case 7:
       return {
         color: '#dac0e8',
-        description: 'Transportation & Utility',
+        description: '1900',
       };
     case 8:
       return {
